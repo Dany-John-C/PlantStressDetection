@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip show streamlit rich plotly 2>&1 | grep -E \"^Name:|^Version:|not found\")",
+      "Bash(python -c \"\nimport ast, sys\nfiles = [\n    'app.py',\n    'run_experiments.py',\n    'utils/plot_style.py',\n    'pipelines/mobilenet_classifier.py',\n    'pipelines/severity_regression.py',\n    'pipelines/embedding_anomaly.py',\n    'pipelines/entropy_drift.py',\n    'pipelines/texture_svm.py',\n    'studies/robustness.py',\n]\nok = True\nfor f in files:\n    try:\n        ast.parse\\(open\\(f\\).read\\(\\)\\)\n        print\\(f'  ✓ {f}'\\)\n    except SyntaxError as e:\n        print\\(f'  ✗ {f}: {e}'\\)\n        ok = False\nsys.exit\\(0 if ok else 1\\)\n\")",
+      "Bash(python -c \"import streamlit, plotly, rich, pandas, numpy; print\\('All dashboard deps OK'\\)\")"
+    ]
+  }
+}

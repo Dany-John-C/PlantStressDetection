@@ -23,3 +23,7 @@ venv.bak/
 
 # Streamlit
 .streamlit/
+
+# Large files and test artifacts
+*.zip
+test_dummy.jpg

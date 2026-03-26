@@ -1,7 +1,7 @@
 # Early Plant Stress Detection Configuration
 
 dataset:
-  original_data_dir: "C:/Users/danyj/Desktop/embedded/PlantStressDetection/dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)/train"
+  original_data_dir: "dataset/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)/train"
   processed_data_dir: "data/processed"
   image_size: [224, 224]
   batch_size: 32
